@@ -1,0 +1,83 @@
+.App {
+  display: flex;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.formWrapper {
+  margin: 2em;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  max-width: 500px;
+  justify-content: center;
+  align-items: center;
+}
+
+.formWrapper > form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form > * {
+  width: 100%;
+}
+
+label {
+  width: 100%;
+  font-weight: 900;
+  padding: 0.5em;
+  text-align: start;
+}
+
+#submitButton {
+  width: 50%;
+  letter-spacing: 2px;
+  transition: 0.1s ease-in;
+}
+
+#submitButton:hover {
+  background-color: rgb(199, 199, 199);
+  transition: 0.1s ease-in;
+  color: black;
+}
+
+textarea {
+  height: 100px;
+}
+
+.reviewDetailsWrapper {
+  padding: 1em;
+  margin: 1em;
+  width: 80%;
+  position: relative;
+  border-radius: 15px;
+  max-width: 1000px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+}
+
+#movieTitle,
+#movieReview {
+  text-align: start;
+  /* padding: 0.3em; */
+  padding-left: 20px;
+  max-lines: 5;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  padding-right: 1em;
+}
