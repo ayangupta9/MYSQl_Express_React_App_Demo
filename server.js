@@ -2,7 +2,8 @@ const express = require('express')
 const cors = require('cors')
 const PORT = process.env.PORT || 5000
 const app = express()
-const mysql = require('mysql')
+const mysql = require('mysql2')
+require('dotenv').config()
 
 const db = mysql.createPool({
   host: process.env.HOSTNAME,
@@ -51,6 +52,7 @@ app.get('/getMovieReviews', (req, res) => {
   const sqlGet = 'SELECT * FROM mern_movie_reviews'
   db.query(sqlGet, (err, result) => {
     res.json(result)
+    if (err) throw err
   })
 })
 

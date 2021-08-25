@@ -4,11 +4,11 @@
   "description": "Simple Movie Review App with MERN Stack (M -> MySql)",
   "main": "server.js",
   "scripts": {
-    "server": "node server.js",
-    "serverdev": "nodemon server.js",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "dev": "concurrently \"npm run serverdev\" \"npm run client\""
+    "serve": "set NODE_ENV=development && node server.js",
+    "servedev": "set NODE_ENV=development && nodemon server.js",
+    "start": "concurrently \"npm run serve\" \"npm run client\"",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run servedev\" \"npm run client\""
   },
   "keywords": [
     "Movie",
@@ -25,8 +25,9 @@
   "dependencies": {
     "concurrently": "^6.2.1",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
     "nodemon": "^2.0.12"
   }
 }
